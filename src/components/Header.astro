@@ -1,0 +1,31 @@
+---
+ const links = [
+    {
+        label : "News 1",
+        link: "/one"
+    },
+    {
+        label : "News 2",
+        link: "/two"
+    }
+ ]
+---
+
+<header>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl" href="/">Sample</a>
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+           {
+                links.map((link) => (
+                     <li>
+                          <a href={link.link} class="btn btn-ghost">{link.label}</a>
+                     </li>
+                ))
+           }
+          </ul>
+        </div>
+      </div>
+</header>   
